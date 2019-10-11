@@ -119,10 +119,10 @@ module BABYLON {
                 if (data.pickInfo.pickedMesh === this.boule) {
                     this.cylindre.forEach(function(element) {
                         element.physicsImpostor = new PhysicsImpostor(element, PhysicsImpostor.CylinderImpostor, {
-                            mass: 1
+                            mass: 0.5
                         });
                     });
-                    this.boule.applyImpulse(data.pickInfo.ray.direction.multiplyByFloats(500, 500, 500), data.pickInfo.pickedPoint);
+                    this.boule.applyImpulse(data.pickInfo.ray.direction.multiplyByFloats(700, 700, 700), data.pickInfo.pickedPoint);
                 }
             });
         }
